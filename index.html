@@ -25,6 +25,29 @@
             <!-- place navbar here -->
         </header>
         <main>   
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+          
+          
+                  <a class="navbar-brand" href="#">
+                    <img class="icon" src="images/logo.png">
+                  </a>
+          
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon justify-content-center"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <ul class="navbar-nav ms-auto me-4 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                      <li class="nav-item"><a class="nav-link" href="academics.html">My Story</a></li>
+                      <li class="nav-item"><a class="nav-link" href="student.html">Skills</a></li>
+                      <li class="nav-item"><a class="nav-link" href="cost.html">Contact Me</a></li>
+                    </ul>
+                  </div>
+                </div>
+                </div>
+              </nav>
+            <div class="gradient">
             <div class="container">
                 <div class="intro">
                     <h1 class="display-1">Hi! I'm Daniela,</h1>
@@ -35,6 +58,41 @@
                         <button class="contact btn btn-outline-light">Contact Me</button>
                     </div>
                 </div>
+            </div>
+        </div>
+            <div id="vue_app">
+                <h2 class="examples">Past Websites</h2>
+                <div class="pages">
+                  <!-- Render each category button -->
+                  <button 
+                    v-for="category in categories" 
+                    :key="category" 
+                    class="badge rounded-pill" 
+                    :class="{ active: category === selectedCategory }"
+                    @click="selectCategory(category)">
+                    {{ category }}
+                  </button>
+                </div>
+                <div class="row g-4" id="websites-container">
+                  <!-- Render websites for the currently selected category -->
+                  <div 
+                    v-for="(site, index) in websitesData[selectedCategory]" 
+                    :key="index" 
+                    class="col-lg-6 col-sm-12 col-12">
+                    <div class="image boxes">
+                      <img class="image__img" :src="site.img" :alt="site.title">
+                      <div class="image__overlay image__overlay--blur">
+                        <div class="image__title">{{ site.title }}</div>
+                        <p class="image__description">
+                          <a :href="site.link" target="_blank" rel="noopener noreferrer">
+                            <button class="button-23" role="button">Learn More</button>
+                          </a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
         </main>
         <footer>
