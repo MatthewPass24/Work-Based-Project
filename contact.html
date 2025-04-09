@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Title</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <header>
+            <!-- place navbar here -->
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html" id="logo"></a>
+              
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon justify-content-center"></span>
+                  </button>
+              
+                  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <ul class="navbar-nav ms-auto me-4 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                      <li class="nav-item"><a class="nav-link" href="academics.html">My Story</a></li>
+                      <li class="nav-item"><a class="nav-link" href="student.html">Skills</a></li>
+                      <li class="nav-item"><a class="nav-link" href="cost.html">Contact Me</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+        </header>
+        <main>
+             <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+        <div class="container">
+  
+          <div class="section-header">
+            <h2>Contact Us</h2>
+            <p>Experience the difference of working with DHA Contracting. Contact us today to discuss your scoreboard,
+              videoboard, or
+              message center installation needs, and let us bring your vision to life.</p>
+          </div>
+  
+        </div>
+  
+  
+  
+        <div class="container">
+  
+          <div class="row gy-5 gx-lg-5">
+  
+  
+  
+            <div class="col-lg-8">
+  
+              <form action="contact.php" method="post" role="form" class="php-email-form">
+                <div class="row">
+                  <div class="col-md-6 form-group">
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                  </div>
+                  <div class="col-md-6 form-group mt-3 mt-md-0">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                  </div>
+                </div>
+                <div class="form-group mt-3">
+                  <input type="text" class="form-control" name="organization" id="organization"
+                    placeholder="Organization / Company Name" required>
+                </div>
+                <div class="form-group mt-3 form-control">
+                  <label class="contact-form-service-label">Reason for reaching out today:</label>
+  
+                  <div class="row">
+                    <div class="col-md-4">
+                      <input type="radio" name="project_type" value="Scoreboard" required> Scoreboard<br>
+                      <input type="radio" name="project_type" value="Videoboard"> Videoboard<br>
+                      <input type="radio" name="project_type" value="Stadium Lights"> Stadium Lights<br>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="radio" name="project_type" value="Msg Center"> Msg Center<br>
+                      <input type="radio" name="project_type" value="Repair/Service"> Repair/Service<br>
+                      <input type="radio" name="project_type" value="Scoreboard Rentals"> Scoreboard Rentals<br>
+                    </div>
+                    <div class="col-md-4">
+                      <input type="radio" name="project_type" value="New Structure"> New Structure<br>
+                      <input type="radio" name="project_type" value="Other Installation"> Other Installation (Specify)<br>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group mt-3">
+                  <textarea class="form-control" name="message" placeholder="Message" required></textarea>
+                </div>
+                <div class="my-3">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Thank you for reaching out, Someone will be in contact with you ASAP about
+                    your email.</div>
+                </div>
+                <div class="text-center"><button type="submit" onclick="gtag_report_conversion()">Send Message</button>
+                </div>
+              </form>
+  
+            </div><!-- End Contact Form -->
+  
+  
+            <div class="col-lg-4">
+  
+              <div class="info">
+                <h3>Get in touch</h3>
+                <p>We look forward to hearing from you and discussing how we can help with your project. </p>
+  
+                <div class="info-item d-flex">
+                  <i class="bi bi-geo-alt flex-shrink-0"></i>
+                  <div>
+                    <h4>Location:</h4>
+                    <p>15 Boulder Trail</p>
+                    <p>Mahwah, NJ 07430</p>
+  
+                  </div>
+                </div><!-- End Info Item -->
+  
+                <div class="info-item d-flex">
+                  <i class="bi bi-envelope flex-shrink-0"></i>
+                  <div>
+                    <h4>Email:</h4>
+                    <p>email@something.com</p>
+                  </div>
+                </div><!-- End Info Item -->
+  
+                <div class="info-item d-flex">
+                  <i class="bi bi-phone flex-shrink-0"></i>
+                  <div>
+                    <h4>Call:</h4>
+                    <p>845.826.5862</p>
+                  </div>
+                </div><!-- End Info Item -->
+  
+              </div>
+  
+            </div>
+          </div>
+  
+        </div>
+      </section><!-- End Contact Section -->
+        </main>
+        <footer>
+            <!-- place footer here -->
+        </footer>
+        <!-- Bootstrap JavaScript Libraries -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>

@@ -44,3 +44,22 @@ h1.display-1 {
 .click{
     margin-top: 2em;
 }
+#logo {
+    display: block; /* ensures the link takes up space */
+    background-color: transparent;
+    border: none;
+    background-image: url("img/Asset 1 (1).svg");
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    background-size: 50px 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: .75em;
+  }
+nav{
+    background-color: #9EB69E;
+}
+li.nav-item{
+    color: white;
+}
