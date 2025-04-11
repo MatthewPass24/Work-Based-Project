@@ -63,3 +63,15 @@ nav{
 li.nav-item{
     color: white;
 }
+#contact{
+    background-color: #9EB69E;
+    margin-top: 5em;
+    margin-left: 5em;
+    margin-right: 5em;
+}
+.message{
+    background-color: #E0C48A;
+}
+#input{
+    background-color:  #E0C48A;
+}
