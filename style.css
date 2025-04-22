@@ -20,6 +20,17 @@ h1.display-1 {
     color: white;
     font-family: "Instrument Sans", sans-serif;
 }
+.skills{
+    text-align: center;
+    margin: 2em;
+}
+h1.banner{
+    color: #8C9874;
+}
+h3.instruction{
+    color: #E0C48A;
+    font-weight: 300;
+}
 .intro {
     margin-top: 0;
 }
