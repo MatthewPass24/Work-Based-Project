@@ -80,6 +80,15 @@ li.nav-item{
 :root {
     --primary-color: #4000ff;
 }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.timeline-wrapper.dragging {
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+  }
 .timeline-wrapper {
     position: relative;
     max-width: 100vw;
@@ -88,17 +97,20 @@ li.nav-item{
     justify-content: center;
     align-items: center;
     overflow-x: auto;
+    cursor: grab;
 }
 .timeline {
     position: absolute;
     height: .22rem;
-    padding: 0 4 rem;
+    padding: 0 4rem;
     background-color: #888;
     list-style-type: none;
-
+    min-width: max-content;
+    padding-left: 2rem;
     --scale: 1;
     display: flex;
 }
+
 .timeline li{
     position: relative;
     width: 20rem;
@@ -181,7 +193,9 @@ li.nav-item{
     background-image: linear-gradient(45deg, var(--primary-color), magenta);
     box-shadow: 0 .1rem .4rem #0004;
     z-index: 100;
+    gap: 1rem;
 }
+
 .data h3{
     text-transform: capitalize;
 }
