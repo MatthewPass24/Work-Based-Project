@@ -33,6 +33,7 @@ h1.banner{
     font-size: 4em;
     text-align: center;
     justify-content: center;
+    margin-bottom: 0em;
 }
 h3.instruction{
     color: #E0C48A;
@@ -278,4 +279,17 @@ li.nav-item{
     font-size: clamp(15px, 1.3vw, 50px);
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
+}
+.clipart {
+    text-decoration: none;
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+.clipart:focus {
+    outline: none;
 }

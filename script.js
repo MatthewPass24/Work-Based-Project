@@ -75,3 +75,38 @@ const app = Vue.createApp({
   });
   
   app.mount('#vue_app');
+
+  function updateDescription(){
+    let helpData = {
+      "Special Effects": {
+        description: [
+          "Became familiar with greenscreens to help create a specific scene"
+        ]
+      },
+      "Camera": {
+        description: [
+          "I started using Canon Cameras for videography, which helped me with aperture, focusing, and using different lenses"
+        ]
+      },
+      "Adobe": {
+        description: [
+        "I use Adobe Premier to help edit my videos, where I learn about splitting and trimming"
+        ]
+      }
+    };
+     // **Check if the selected major exists in faqData**
+    if (!faqData[major]) {
+        console.error("No data found for major:", major);
+        return;
+    }
+  
+    // **Update FAQ Title**
+    document.getElementById('change-title').innerText = major + " FAQ";
+  
+    // **Update each accordion section**
+    document.getElementById('job-entailment').innerHTML = formatList(faqData[major].entailment);
+    document.getElementById('skills-needed').innerHTML = formatList(faqData[major].skills);
+    document.getElementById('average-salary').innerHTML = formatList(faqData[major].salary);
+    
+  }
+  
