@@ -76,37 +76,40 @@ const app = Vue.createApp({
   
   app.mount('#vue_app');
 
-  function updateDescription(){
+  function updateDescription(skill) {
     let helpData = {
-      "Special Effects": {
-        description: [
-          "Became familiar with greenscreens to help create a specific scene"
-        ]
+      "VFX": {
+        title: "Special Effects",
+        description: "Became familiar with greenscreens to help create a specific scene",
+        image: "img/special-effects-icon-2048x2048-o197xkfs 1.png"
       },
       "Camera": {
-        description: [
-          "I started using Canon Cameras for videography, which helped me with aperture, focusing, and using different lenses"
-        ]
+        title: "Camera Work",
+        description: "I started using Canon Cameras for videography, which helped me with aperture, focusing, and using different lenses",
+        image: "img/camera.png"
       },
       "Adobe": {
-        description: [
-        "I use Adobe Premier to help edit my videos, where I learn about splitting and trimming"
-        ]
+        title: "Adobe Premiere",
+        description: "I use Adobe Premiere to help edit my videos, where I learn about splitting and trimming",
+        image: "img/Adobe Express - file (5).png"
       }
     };
-     // **Check if the selected major exists in faqData**
-    if (!faqData[major]) {
-        console.error("No data found for major:", major);
-        return;
-    }
   
-    // **Update FAQ Title**
-    document.getElementById('change-title').innerText = major + " FAQ";
+    let selected = helpData[skill];
   
-    // **Update each accordion section**
-    document.getElementById('job-entailment').innerHTML = formatList(faqData[major].entailment);
-    document.getElementById('skills-needed').innerHTML = formatList(faqData[major].skills);
-    document.getElementById('average-salary').innerHTML = formatList(faqData[major].salary);
-    
-  }
+    // Now update the HTML
+    document.getElementById('change-title').innerText = selected.title;
+    document.querySelector('.info-section').innerText = selected.description;
+    document.querySelector('.offer-image').innerHTML = `<img src="${selected.image}" alt="${selected.title}" style="max-width: 100%;">`;
+  }  
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
   
+      window.scrollTo({
+        top: target.offsetTop - 50, // Adjust this value to get the perfect centering
+        behavior: 'smooth'
+      });
+    });
+  });
