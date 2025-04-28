@@ -246,27 +246,38 @@ li.nav-item{
     margin: 300px 0;
 }
 
-.offer-image {
+.skills-image {
     height: 600px;
     width: clamp(600px, 70vw, 900px);
-    background: url('img/image\ 2.png');
+
+    /* No hardcoded background here */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    
+    transition: background-image 0.5s ease-in-out;
     z-index: 1;
 }
 
-.offer-text {
+.skill-image img {
+    max-width: 100%;
+}
+
+/* (optional) if you want the clicked skill button to highlight */
+.skill-button.active {
+    border: 2px solid #3498db;
+    border-radius: 8px;
+}
+.skills-text {
     font-family: 'Poppins', sans-serif;
     height: clamp(400px, 30vw, 500px);
     width: clamp(350px, 45vw, 500px);
     background: #A8BEAB;
-    border: #dde2dc63 5px solid;
     border-radius: 6px;
     color: black;
     z-index: 2;
     margin: -100px;
-    box-shadow: 5px 10px 20px 0px;
+
 }
 
 
