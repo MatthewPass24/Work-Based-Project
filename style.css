@@ -249,16 +249,13 @@ li.nav-item{
 .skills-image {
     height: 600px;
     width: clamp(600px, 70vw, 900px);
-
-    /* No hardcoded background here */
+    background-image: url('img/image 2.png'); /* <-- add this line */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    
     transition: background-image 0.5s ease-in-out;
     z-index: 1;
 }
-
 .skill-image img {
     max-width: 100%;
 }
@@ -308,4 +305,10 @@ li.nav-item{
 
 .clipart:focus {
     outline: none;
+}
+footer{
+    background-color: #9EB69E;
+}
+section.contact{
+    margin-bottom: 10em;
 }
