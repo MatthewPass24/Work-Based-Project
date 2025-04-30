@@ -1,0 +1,80 @@
+{
+    "Final Portfolio": [
+      {
+        "img": "img/image 1.png",
+        "title": "Mustang Morning Show 1",
+        "link": "https://portfolio.byteroach.com/?authuser=0",
+        "alt": "Screenshot of Dominic Adragna's portfolio site"
+      },
+      {
+        "img": "img/Screenshot 2025-04-02 124527.png",
+        "title": "Mustang Morning Show 2",
+        "link": "https://abbiemarder.github.io/Senior-Portfolio/?authuser=0",
+        "alt": "Screenshot of Abbie Marder's portfolio site"
+      },
+      {
+        "img": "img/Screenshot 2025-04-02 124847.png",
+        "title": "Mustang Morning Show 3",
+        "link": "https://524rc.github.io/Port3/?authuser=0",
+        "alt": "Screenshot of Ryan Chung's portfolio site"
+      },
+      {
+        "img": "img/image (3).png",
+        "title": "NJGPA Music Video",
+        "link": "https://bwinecoor.github.io/newportfolio/site2.html#home",
+        "alt": "Screenshot of Brandon Winecoor's portfolio site"
+      }
+    ],
+    "Notable Sites": [
+      {
+        "img": "img/image 1.png",
+        "title": "Rock Paper Scissors",
+        "link": "https://issac-eligulashvili.github.io/rps/",
+        "alt": "Screenshot of Rock Paper Scissors game project"
+      },
+      {
+        "img": "img/Screenshot 2025-04-02 124527.png",
+        "title": "Work Learning Project",
+        "link": "https://saltforsale.github.io/Phase-Tw0/",
+        "alt": "Screenshot of Work Learning Project website"
+      },
+      {
+        "img": "img/Screenshot 2025-04-02 124847.png",
+        "title": "Coco Chanel Site",
+        "link": "https://ayatsakalla.github.io/Look-Ma--I-m-Famous/index.html",
+        "alt": "Screenshot of Coco Chanel website project"
+      },
+      {
+        "img": "iimg/image (3).png",
+        "title": "Final Junior Site",
+        "link": "https://kylerabkin61.github.io/Final-Project/index.html#story",
+        "alt": "Screenshot of Final Junior Site project"
+      }
+    ],
+    "Senior Projects": [
+      {
+        "img": "img/alumni/movies.png",
+        "title": "NJIT Movie Project",
+        "link": "https://adilsoomro15.github.io/Soomro-P3/",
+        "alt": "Screenshot of NJIT Movie Project site"
+      },
+      {
+        "img": "img/alumni/crochet.png",
+        "title": "Crochet Club Project",
+        "link": "https://523chloel.github.io/CrochetCrew/",
+        "alt": "Screenshot of Crochet Club Project website"
+      },
+      {
+        "img": "img/alumni/njit-project.png",
+        "title": "NJIT Slideshow Project",
+        "link": "https://zlevin1228.github.io/NJIT-Slideshow/",
+        "alt": "Screenshot of NJIT Slideshow Project site"
+      },
+      {
+        "img": "img/alumni/caltech.png",
+        "title": "College Recruitment",
+        "link": "https://saltforsale.github.io/Phase-Tw0/",
+        "alt": "Screenshot of Collect Recruitment website"
+      }
+    ]
+  }

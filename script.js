@@ -1,53 +1,131 @@
-const timelineWrapper = document.querySelector('.timeline-wrapper');
-const dataBoxes = document.querySelectorAll('.timeline li .data');
-
-// Toggle open/close for data boxes
-dataBoxes.forEach(data => {
-  data.addEventListener('click', () => {
-    dataBoxes.forEach(d => {
-      if (d !== data) d.classList.remove('show');
+const wrapper = document.querySelector(".wrapper");
+const carousel = document.querySelector(".carousel");
+const firstCardWidth = carousel.querySelector(".card").offsetWidth;
+const arrowBtns = document.querySelectorAll(".wrapper i");
+const carouselChildrens = [...carousel.children];
+let isDragging = false, isAutoPlay = true, startX, startScrollLeft, timeoutId;
+// Get the number of cards that can fit in the carousel at once
+let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth);
+// Insert copies of the last few cards to beginning of carousel for infinite scrolling
+carouselChildrens.slice(-cardPerView).reverse().forEach(card => {
+    carousel.insertAdjacentHTML("afterbegin", card.outerHTML);
+});
+// Insert copies of the first few cards to end of carousel for infinite scrolling
+carouselChildrens.slice(0, cardPerView).forEach(card => {
+    carousel.insertAdjacentHTML("beforeend", card.outerHTML);
+});
+// Scroll the carousel at appropriate postition to hide first few duplicate cards on Firefox
+carousel.classList.add("no-transition");
+carousel.scrollLeft = carousel.offsetWidth;
+carousel.classList.remove("no-transition");
+// Add event listeners for the arrow buttons to scroll the carousel left and right
+arrowBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+        carousel.scrollLeft += btn.id == "left" ? -firstCardWidth : firstCardWidth;
     });
-    data.classList.toggle('show');
+});
+const dragStart = (e) => {
+    isDragging = true;
+    carousel.classList.add("dragging");
+    // Records the initial cursor and scroll position of the carousel
+    startX = e.pageX;
+    startScrollLeft = carousel.scrollLeft;
+}
+const dragging = (e) => {
+    if(!isDragging) return; // if isDragging is false return from here
+    // Updates the scroll position of the carousel based on the cursor movement
+    carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
+}
+const dragStop = () => {
+    isDragging = false;
+    carousel.classList.remove("dragging");
+}
+const infiniteScroll = () => {
+    // If the carousel is at the beginning, scroll to the end
+    if(carousel.scrollLeft === 0) {
+        carousel.classList.add("no-transition");
+        carousel.scrollLeft = carousel.scrollWidth - (2 * carousel.offsetWidth);
+        carousel.classList.remove("no-transition");
+    }
+    // If the carousel is at the end, scroll to the beginning
+    else if(Math.ceil(carousel.scrollLeft) === carousel.scrollWidth - carousel.offsetWidth) {
+        carousel.classList.add("no-transition");
+        carousel.scrollLeft = carousel.offsetWidth;
+        carousel.classList.remove("no-transition");
+    }
+    // Clear existing timeout & start autoplay if mouse is not hovering over carousel
+    clearTimeout(timeoutId);
+    if(!wrapper.matches(":hover")) autoPlay();
+}
+const autoPlay = () => {
+    if(window.innerWidth < 800 || !isAutoPlay) return; // Return if window is smaller than 800 or isAutoPlay is false
+    // Autoplay the carousel after every 2500 ms
+    timeoutId = setTimeout(() => carousel.scrollLeft += firstCardWidth, 2500);
+}
+autoPlay();
+carousel.addEventListener("mousedown", dragStart);
+carousel.addEventListener("mousemove", dragging);
+document.addEventListener("mouseup", dragStop);
+carousel.addEventListener("scroll", infiniteScroll);
+wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
+wrapper.addEventListener("mouseleave", autoPlay);
+
+  // Set the default background to "image 2.png" when the page loads
+  window.addEventListener('DOMContentLoaded', function() {
+    const skillsImage = document.querySelector('.skills-image');
+    skillsImage.style.backgroundImage = "url('img/image 2.png')";
+    skillsImage.style.backgroundSize = "cover";
+    skillsImage.style.backgroundPosition = "center";
+    updateDescription('VFX'); // You can set this as default, or remove if not needed
   });
-});
-
-document.querySelectorAll('.timeline li .data .close').forEach(closeBtn => {
-  closeBtn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    closeBtn.closest('.data').classList.remove('show');
+  
+  
+  function updateDescription(skill) {
+    const helpData = {
+      "VFX": {
+        title: "Special Effects",
+        description: "Became familiar with greenscreens to help create a specific scene",
+        backgroundImage: "img/Adobe%20Express%20-%20file.jpg"
+      },
+      "Camera": {
+        title: "Camera Work",
+        description: "I started using Canon Cameras for videography, which helped me with aperture, focusing, and using different lenses",
+        backgroundImage: "img/camera.jpg"
+      },
+      "Adobe": {
+        title: "Adobe Premiere",
+        description: "I use Adobe Premiere to help edit my videos, where I learn about splitting and trimming",
+        backgroundImage: "img/Adobe%20Express%20-%20file%20(6).png"
+      }
+    };
+  
+    const selected = helpData[skill];
+  
+    // Update title
+    document.getElementById('change-title').innerText = selected.title;
+  
+    // Update description
+    document.querySelector('.info-section').innerText = selected.description;
+  
+    // Update background image
+    const skillsImage = document.querySelector('.skills-image');
+    skillsImage.style.backgroundImage = `url('${selected.backgroundImage}')`;
+    skillsImage.style.backgroundSize = "cover";
+    skillsImage.style.backgroundPosition = "center";
+  }
+  
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      window.scrollTo({
+        top: target.offsetTop - 50,
+        behavior: 'smooth'
+      });
+    });
   });
-});
-
-// Click-and-drag scroll behavior
-let isDown = false;
-let startX;
-let scrollLeft;
-
-timelineWrapper.addEventListener('mousedown', (e) => {
-  isDown = true;
-  timelineWrapper.classList.add('dragging');
-  startX = e.pageX - timelineWrapper.offsetLeft;
-  scrollLeft = timelineWrapper.scrollLeft;
-});
-
-timelineWrapper.addEventListener('mouseleave', () => {
-  isDown = false;
-  timelineWrapper.classList.remove('dragging');
-});
-
-timelineWrapper.addEventListener('mouseup', () => {
-  isDown = false;
-  timelineWrapper.classList.remove('dragging');
-});
-
-timelineWrapper.addEventListener('mousemove', (e) => {
-  if (!isDown) return;
-  e.preventDefault();
-  const x = e.pageX - timelineWrapper.offsetLeft;
-  const walk = (x - startX) * 1.5; // multiplier = scroll speed
-  timelineWrapper.scrollLeft = scrollLeft - walk;
-});
-
+  
 const app = Vue.createApp({
     data() {
       return {
@@ -59,7 +137,7 @@ const app = Vue.createApp({
     methods: {
       async fetchWebsitesData() {
         try {
-          const response = await fetch('alumni.json'); // Links the json filename to the js
+          const response = await fetch('projects.json'); // Links the json filename to the js
           this.websitesData = await response.json();
         } catch (error) {
           console.error('Error loading website data:', error);
@@ -75,54 +153,3 @@ const app = Vue.createApp({
   });
   
   app.mount('#vue_app');
-// Your existing function
-function updateDescription(skill) { 
-  const helpData = {
-    "VFX": {
-      title: "Special Effects",
-      description: "Became familiar with greenscreens to help create a specific scene",
-      backgroundImage: "img/Adobe%20Express%20-%20file.jpg"
-    },
-    "Camera": {
-      title: "Camera Work",
-      description: "I started using Canon Cameras for videography, which helped me with aperture, focusing, and using different lenses",
-      backgroundImage: "img/camera.jpg"
-    },
-    "Adobe": {
-      title: "Adobe Premiere",
-      description: "I use Adobe Premiere to help edit my videos, where I learn about splitting and trimming",
-      backgroundImage: "img/Adobe%20Express%20-%20file%20(6).png"
-    }
-  };
-
-  const selected = helpData[skill];
-
-  // Update title
-  document.getElementById('change-title').innerText = selected.title;
-
-  // Update description
-  document.querySelector('.info-section').innerText = selected.description;
-
-  // Update background image
-  const skillsImage = document.querySelector('.skills-image');
-  skillsImage.style.backgroundImage = `url('${selected.backgroundImage}')`;
-  skillsImage.style.backgroundSize = "cover";
-  skillsImage.style.backgroundPosition = "center";
-}
-
-// Smooth scroll for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    window.scrollTo({
-      top: target.offsetTop - 50,
-      behavior: 'smooth'
-    });
-  });
-});
-
-window.onload = function() {
-  updateDescription('VFX'); // or 'Camera' or 'Adobe', depending on what you want as default
-};
-
