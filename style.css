@@ -22,6 +22,9 @@ body{
     justify-content: center; /* This centers vertically */
 
 }
+h1.editing{
+  text-align: center;
+}
 h1.display-1 {
     font-weight: 600;
     color: white;
@@ -383,7 +386,7 @@ h2.examples{
     justify-content: center;
     opacity: 0;
     transition: opacity 0.5s;
-    font-family: "Kanit";
+    font-family: "Poppins", sans-serif;
   }
   .image__overlay > * {
     transform: translateY(50px);
@@ -398,7 +401,7 @@ h2.examples{
   .image__title {
     font-size: 2em;
     font-weight: bold;
-    font-family: "Kanit";
+    font-family: "Poppins", sans-serif;
   }
   .image__description {
     font-size: 1.25em;
