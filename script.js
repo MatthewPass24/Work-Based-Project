@@ -6,6 +6,7 @@
     skillsImage.style.backgroundImage = "url('img/image 2.png')";
     skillsImage.style.backgroundSize = "cover";
     skillsImage.style.backgroundPosition = "center";
+    updateDescription('VFX'); // You can set this as default, or remove if not needed
   });
   
   
@@ -55,7 +56,7 @@
     });
   });
   
-  const app = Vue.createApp({
+const app = Vue.createApp({
     data() {
       return {
         selectedCategory: 'Final Portfolio',
