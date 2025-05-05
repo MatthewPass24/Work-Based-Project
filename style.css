@@ -657,3 +657,7 @@ h1.examples{
   .overlay-container:hover .overlay-text {
     opacity: 1;
   }
+.message{
+    color: white;
+    margin-bottom: 1em;
+  }
