@@ -42,76 +42,88 @@
               </nav>
         </header>
         <main>
-             <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-        <div class="container">
-  
-          <div class="section-header">
-            <h2 class="text-light">Contact Us</h2>
-            <p>Experience the difference of working with DHA Contracting. Contact us today to discuss your scoreboard,
-              videoboard, or
-              message center installation needs, and let us bring your vision to life.</p>
+          <h1 class="reach text-align-center justify-content-center">Contact Me</h1>
+<!-- ======= Contact Section ======= -->
+<section id="contact" class="contact py-5" ">
+  <div class="container">
+
+
+    <div class="row gy-5 gx-lg-5">
+
+      <!-- Contact Form -->
+      <div class="col-lg-8 p-4 rounded main" style="background-color: #9EB69E;">
+        <h3 class="mb-4 text-light">Send Me a Message</h3>
+
+        <form action="contact.php" method="post" role="form" class="php-email-form">
+          <div class="row">
+            <div class="col-md-6 form-group mb-3">
+              <input type="text" name="name" class="form-control  text-white border-0" id="name" placeholder="Your Name" required>
+            </div>
+            <div class="col-md-6 form-group mt-3 mt-md-0 mb-3">
+              <input type="email" class="form-control text-white border-0" name="email" id="email" placeholder="Your Email" required>
+            </div>
           </div>
-  
+          <div class="form-group mb-3">
+            <input type="text" class="form-control text-white border-0" name="organization" id="organization"
+              placeholder="Organization / Company Name" required>
+          </div>
+
+          <!-- Reason for reaching out -->
+          <div class="form-group mt-3 mb-3 p-3 rounded" style="background-color: #c0d1bd;">
+            <label class="contact-form-service-label mb-2">Reason for reaching out today:</label>
+            <div class="row">
+              <div class="col-md-4 text-white">
+                <div><input type="radio" name="project_type" value="Scoreboard" required> Scoreboard</div>
+                <div><input type="radio" name="project_type" value="Videoboard"> Videoboard</div>
+                <div><input type="radio" name="project_type" value="Stadium Lights"> Stadium Lights</div>
+              </div>
+              <div class="col-md-4 text-white">
+                <div><input type="radio" name="project_type" value="Msg Center"> Msg Center</div>
+                <div><input type="radio" name="project_type" value="Repair/Service"> Repair/Service</div>
+                <div><input type="radio" name="project_type" value="Scoreboard Rentals"> Scoreboard Rentals</div>
+              </div>
+              <div class="col-md-4 text-white">
+                <div><input type="radio" name="project_type" value="New Structure"> New Structure</div>
+                <div><input type="radio" name="project_type" value="Other Installation"> Other Installation (Specify)</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group mt-3 mb-4">
+            <textarea class="form-control text-white border-0" name="message" placeholder="Message" required></textarea>
+          </div>
+
+          <div class="my-3">
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Thank you for reaching out, Someone will be in contact with you ASAP about
+              your email.</div>
+          </div>
+
+          <div class="text-start">
+            <button type="submit" class="message btn btn-danger px-4 py-2" onclick="gtag_report_conversion()">Send Message</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Optional: Right column for contact info -->
+      <div class="col-lg-4 p-4 rounded" style="background-color: #9EB69E;">
+        <h4 class="mb-3">Contact Information</h4>
+        <p><strong>Email:</strong><br><a href="mailto:DDiMartino@frhsd.com" class="text-white">DDiMartino@frhsd.com</a></p>
+        <p><strong>Location:</strong><br>New Jersey Institute of Technology<br>Newark, NJ 07102</p>
+        <p><strong>Follow Us:</strong><br>@instagramaccount</p>
+        <div class="d-flex gap-3">
+          <a href="#" class="text-white"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
+          <a href="#" class="text-white"><i class="bi bi-github"></i></a>
+          <a href="#" class="text-white"><i class="bi bi-youtube"></i></a>
         </div>
-  
-  
-  
-        <div class="container">
-  
-          <div class="row gy-5 gx-lg-5">
-  
-  
-  
-            <div class="col-lg-8">
-  
-              <form action="contact.php" method="post" role="form" class="php-email-form">
-                <div class="row">
-                  <div class="col-md-6 form-group">
-                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-                  </div>
-                  <div class="col-md-6 form-group mt-3 mt-md-0">
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-                  </div>
-                </div>
-                <div class="form-group mt-3">
-                  <input type="text" class="form-control" name="organization" id="organization"
-                    placeholder="Organization / Company Name" required>
-                </div>
-                <div class="form-group mt-3 form-control">
-                  <label class="contact-form-service-label">Reason for reaching out today:</label>
-  
-                  <div class="row">
-                    <div class="col-md-4">
-                      <input type="radio" name="project_type" value="Scoreboard" required> Scoreboard<br>
-                      <input type="radio" name="project_type" value="Videoboard"> Videoboard<br>
-                      <input type="radio" name="project_type" value="Stadium Lights"> Stadium Lights<br>
-                    </div>
-                    <div class="col-md-4">
-                      <input type="radio" name="project_type" value="Msg Center"> Msg Center<br>
-                      <input type="radio" name="project_type" value="Repair/Service"> Repair/Service<br>
-                      <input type="radio" name="project_type" value="Scoreboard Rentals"> Scoreboard Rentals<br>
-                    </div>
-                    <div class="col-md-4">
-                      <input type="radio" name="project_type" value="New Structure"> New Structure<br>
-                      <input type="radio" name="project_type" value="Other Installation"> Other Installation (Specify)<br>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group mt-3">
-                  <textarea class="form-control" name="message" placeholder="Message" required></textarea>
-                </div>
-                <div class="my-3">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Thank you for reaching out, Someone will be in contact with you ASAP about
-                    your email.</div>
-                </div>
-                <div class="text-center"><button type="submit" class="message" onclick="gtag_report_conversion()">Send Message</button>
-                </div>
-              </form>
-  
-            </div><!-- End Contact Form -->
+      </div>
+
+    </div>
+  </div>
+</section>
+
   
   
             <div class="col-lg-4">

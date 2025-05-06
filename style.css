@@ -97,17 +97,33 @@ nav{
 li.nav-item{
     color: white;
 }
-#contact{
-    background-color: #9EB69E;
-    margin-top: 5em;
-    margin-left: 5em;
-    margin-right: 5em;
+.contact input,
+.contact textarea {
+  background-color: #c0d1bd;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
 }
-.message{
-    background-color: #E0C48A;
+
+.contact input::placeholder,
+.contact textarea::placeholder {
+  color: #aaa;
 }
-#input{
-    background-color:  #E0C48A;
+.main{
+  border: 2px solid #b5ceb5;
+}
+.contact button.btn-danger {
+  background-color: #E0C48A;
+  border: none;
+  border-radius: 8px;
+}
+
+.contact .form-control:focus {
+  box-shadow: none;
+  background-color: #E7ECE6;
+}
+.form-control{
+  background-color: #E7ECE6;
 }
 :root {
     --primary-color: #4000ff;
@@ -198,6 +214,11 @@ li.nav-item{
 }
 .timeline li:hover .title{
     opacity: 1;
+}
+h1.reach{
+  text-align: center;
+  margin: 2em;
+  font-family: "Poppins", sans-seriff;
 }
 .data {
     width: 1.3rem;
@@ -660,4 +681,5 @@ h1.examples{
 .message{
     color: white;
     margin-bottom: 1em;
+    border-radius: 100%
   }
