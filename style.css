@@ -8,7 +8,7 @@ html {
 
   }
 body{
-    background-color: #F4F3F1;
+    background-color: #e7dfd675;
 }
 .gradient{
     background-image: linear-gradient(#A8BEAB, #DDE2DD);
@@ -40,7 +40,7 @@ h1.display-1 {
     margin: 2em;
 }
 h1.banner{
-    color: #8fa78f;
+    color: #8fa794;
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-size: 4em;
@@ -107,7 +107,7 @@ li.nav-item{
 
 .contact input::placeholder,
 .contact textarea::placeholder {
-  color: #aaa;
+  color: #ffffffb7;
 }
 .main{
   border: 2px solid #b5ceb5;
@@ -120,7 +120,7 @@ li.nav-item{
 
 .contact .form-control:focus {
   box-shadow: none;
-  background-color: #E7ECE6;
+  background-color: #cddbca;
 }
 .form-control{
   background-color: #E7ECE6;
@@ -219,6 +219,10 @@ h1.reach{
   text-align: center;
   margin: 2em;
   font-family: "Poppins", sans-seriff;
+}
+h1#form{
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
 .data {
     width: 1.3rem;
@@ -454,16 +458,16 @@ h2.examples{
     justify-content: center;
     min-height: 100vh;
   }
-h1.story{
-  margin-top: 3em;
+h1#past{
+  margin-top: 2em;
   font-family: "Instrument Sans", sans-serif;
-  font-weight: 600;
 }
-h1.examples{
+h1#examples{
   font-family: "Instrument Sans", sans-serif;
-  font-weight: 600;
-  margin-top: 3em;
+  margin-top: 2em;
+  margin-bottom: .75em;
 }
+h1
   .wrapper i {
     top: 50%;
     height: 50px;

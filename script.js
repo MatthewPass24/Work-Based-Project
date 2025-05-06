@@ -25,7 +25,7 @@
       "Adobe": {
         title: "Adobe Premiere",
         description: "I use Adobe Premiere to help edit my videos, where I learn about splitting and trimming",
-        backgroundImage: "img/Adobe%20Express%20-%20file%20(6).png"
+        backgroundImage: "img/editing.jpg"
       }
     };
   
