@@ -685,5 +685,99 @@ h1
 .message{
     color: white;
     margin-bottom: 1em;
-    border-radius: 100%
-  }
+    border-radius: 100%;
+}
+.up{
+  border-color: transparent;
+  background-color: var(--current-color);
+  text-align: center;
+  color: white;
+  margin: 2rem;
+  border-radius: 100%;
+  width: 3rem; /* Adjust as needed */
+  height: 3rem;
+  background-repeat: no-repeat;
+  align-items: center;
+  font-size: 2rem;
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: 2px solid white;
+}
+.up:hover{
+  background-color: grey;
+ color: var(--current-color);
+ border: 2px solid white;
+}
+.arrow{
+  color: #ffffff;
+  text-decoration: none;
+}
+.arrow:hover{
+  color: var(--current-color);
+}
+a{
+  text-decoration: none;
+}
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  background-color: #8fa794; /* Set a background color */
+  color: white; /* Text color */
+  font-family: 'Poppins';
+}
+
+#myBtn:hover {
+  background-color: #729b7b; /* Add a dark-grey background on hover */
+
+  color: white;
+}
+/* Contact Info Styling */
+.contact-info {
+  margin-bottom: 2rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.contact-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #E0C48A;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.contact-icon img {
+  width: 30px;
+  height: 20px;
+}
+.contact-icon img.insta{
+  width: 25px;
+  height: 25px;
+}
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  border-color: #FF474D;
+}
+
+.contact-card h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
