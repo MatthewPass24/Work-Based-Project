@@ -59,8 +59,8 @@
 const app = Vue.createApp({
     data() {
       return {
-        selectedCategory: 'Final Portfolio',
-        categories: ['Final Portfolio', 'Notable Sites', 'Senior Projects'],
+        selectedCategory: 'Season 1 Highlights',
+        categories: ['Season 1 Highlights', 'Season 2 Highlights', 'Personal Projects'],
         websitesData: {}
       };
     },

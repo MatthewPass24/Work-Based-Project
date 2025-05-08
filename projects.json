@@ -1,5 +1,5 @@
 {
-    "Final Portfolio": [
+    "Season 1 Highlights": [
       {
         "img": "img/image 1.png",
         "title": "Mustang Morning Show 1",
@@ -25,7 +25,7 @@
         "alt": "Screenshot of Brandon Winecoor's portfolio site"
       }
     ],
-    "Notable Sites": [
+    "Season 2 Highlights": [
       {
         "img": "img/image 1.png",
         "title": "Rock Paper Scissors",
@@ -51,7 +51,7 @@
         "alt": "Screenshot of Final Junior Site project"
       }
     ],
-    "Senior Projects": [
+    "Personal Projects": [
       {
         "img": "img/alumni/movies.png",
         "title": "NJIT Movie Project",
