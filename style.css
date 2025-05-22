@@ -38,7 +38,7 @@ h1.display-1 {
 }
 .skills{
     text-align: center;
-    margin-bottom: 0em;
+    margin-bottom: -5em;
     margin-top: 5em;
 }
 h1.banner{
@@ -49,6 +49,9 @@ h1.banner{
     text-align: center;
     justify-content: center;
     margin-bottom: 0em;
+}
+h1#green{
+  margin-bottom: 1em;
 }
 .content {
   position: relative;
@@ -61,7 +64,7 @@ h1.banner{
 }
 
 .lessons{
-  margin-top: 1em;
+  margin-top: -5em;
 }
 /* Top-left corner border */
 .content::before,
@@ -376,7 +379,26 @@ h1#form{
 .skill-image img {
     max-width: 100%;
 }
+/* Base size (default for large screens) */
+.emoji {
+  width: 150px;
+  height: auto;
+  transition: width 0.3s ease;
+}
 
+/* Medium screens (e.g. tablets) */
+@media (max-width: 768px) {
+  .emoji {
+    width: 100px;
+  }
+}
+
+/* Small screens (e.g. phones) */
+@media (max-width: 480px) {
+  .emoji {
+    width: 75px;
+  }
+}
 /* (optional) if you want the clicked skill button to highlight */
 .skill-button.active {
     border: 2px solid #3498db;
@@ -867,7 +889,12 @@ a{
 }
 /*Body
 ==============================*/
-/* Removes gaps between bootstrap columns */
+/* Gallery container */
+.gallery-container {
+  margin-bottom: 8em;
+}
+
+/* Removes gaps between Bootstrap columns */
 .row.no-gutters {
   margin-right: 0;
   margin-left: 0;
@@ -877,10 +904,10 @@ a{
   padding-right: 0;
 }
 
-/* Main gallery link */
+/* Main gallery item */
 .gallery-item {
-  display: block;
   position: relative;
+  display: block;
   overflow: hidden;
 }
 
@@ -888,38 +915,53 @@ a{
   width: 100%;
   height: 320px;
   object-fit: cover;
-  transition: transform .8s ease-in-out;
+  transition: transform 0.5s ease, filter 0.5s ease;
   display: block;
 }
 
+/* Zoom + darken on hover */
 .gallery-item:hover img {
-  transform: scale(1.5);
+  transform: scale(1.1);
+  filter: brightness(60%);
 }
 
-.gallery-container{
-  margin-bottom: 8em;
-}
-/* Overlay */
-.col-pic {
+/* Text container */
+.col-pic h5 {
   position: absolute;
-  top: 0;
+  bottom: 15px;
+  left: 15px;
+  margin: 0;
+  color: #fff;
+  font-size: 1rem;
+  font-family: 'Roboto Slab', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 2;
+}
+
+/* Reveal text on hover */
+.gallery-item:hover .col-pic h5 {
+  opacity: 1;
+}
+
+/* Overlay using ::after for gradient blend */
+.gallery-item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  padding-top: 6.5em;
-  background: rgba(0, 0, 0, 0.43);
-  text-align: center;
-  transition: background 0.3s ease-in-out;
+  height: 0%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+  transition: height 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+  z-index: 1;
 }
 
-.gallery-item:hover .col-pic {
-  background: rgba(0, 0, 0, 0.59);
-}
-
-.col-pic h5 {
-  color: #fff;
-  font-size: 20px;
-  text-transform: uppercase;
-  font-family: 'Roboto Slab', sans-serif;
-  letter-spacing: 0.25px;
+/* Show gradient on hover */
+.gallery-item:hover::after {
+  height: 50%;
+  opacity: 1;
 }

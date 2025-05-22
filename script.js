@@ -15,7 +15,7 @@
       "VFX": {
         title: "Special Effects",
         description: "Became familiar with greenscreens to help create a specific scene",
-        backgroundImage: "img/Adobe%20Express%20-%20file.jpg"
+        backgroundImage: "img/screen.jpg"
       },
       "Camera": {
         title: "Camera Work",
