@@ -141,28 +141,64 @@ h3.instruction{
 .intro {
     margin-top: 0;
 }
-.btn.about{
-    color: #A8BEAB;
-    font-family: "Instrument Sans", sans-serif;
-    font-size: 2.5em;
-    padding-left: 1em;
-    padding-right: 1em;
-    margin-right: .5em;
-    border-radius: 10px;
-    background-color: white;
-    border: 4px solid white;
+/* Make .click a flex container that stays inline with the text */
+.click {
+  display: flex;
+  flex-wrap: nowrap; /* prevent wrapping unless absolutely needed */
+  gap: 1em;
+  align-items: center;
+  justify-content: start;
+  margin-top: 1em;
 }
-.btn.contact{
-    font-family: "Instrument Sans", sans-serif;
-    font-size: 2.5em;
-    padding-left: 1em;
-    padding-right: 1em;
-    border-radius: 10px;
-    border: 4px solid white;
 
+/* Base button styles */
+.btn.about,
+.btn.contact {
+  font-family: "Instrument Sans", sans-serif;
+  font-size: 2.5em;
+  padding: 0.3em 1em;
+  border-radius: 10px;
+  border: 4px solid white;
+  white-space: nowrap;
 }
-.click{
-    margin-top: 2em;
+
+/* Specific styles */
+.btn.about {
+  color: #A8BEAB;
+  background-color: white;
+}
+
+.btn.contact {
+  color: white;
+  background-color: transparent;
+}
+
+/* RESPONSIVE scaling for smaller screens */
+@media (max-width: 768px) {
+  .btn.about,
+  .btn.contact {
+    font-size: 1.5em;
+    padding: 0.3em 0.8em;
+  }
+}
+
+@media (max-width: 576px) {
+  .col-12.col-lg-6 {
+    padding-left: 1 !important;
+    padding-right: 0 !important;
+  }
+
+  .click {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+
+  .btn.about,
+  .btn.contact {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+  }
 }
 #logo {
     display: block; /* ensures the link takes up space */
