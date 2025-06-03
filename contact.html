@@ -8,6 +8,7 @@
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
         <!-- Bootstrap CSS v5.2.1 -->
         <link
@@ -16,6 +17,8 @@
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous"
         />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
         <link rel="stylesheet" href="style.css">
     </head>
 
@@ -44,122 +47,103 @@
         <main>
           <h1 class="banner text-align-center justify-content-center mb-5" id="form">Contact Me</h1>
 <!-- ======= Contact Section ======= -->
-<section id="contact" class="contact py-5" ">
+<section id="contact" class="py-5 contact">
   <div class="container">
+    <div class="row g-0 shadow rounded overflow-hidden green" style="background-color: #9EB69E; font-family: 'Poppins', sans-serif;">
+      <!-- Form Section -->
+      <div class="col-lg-8 p-4">
+        <h3 class="fw-bold text-white mb-4">Send Me a Message</h3>
+        <form action="https://api.web3forms.com/submit" method="POST" id="form">
+          <input type="hidden" name="access_key" value="dc593151-0ece-4356-ad59-f5598fc19511" />
+          <input type="hidden" name="subject" value="New Submission from Web3Forms" />
+          <input type="checkbox" name="botcheck" class="d-none" />
 
-
-    <div class="row gy-5 gx-lg-5">
-
-      <!-- Contact Form -->
-      <div class="col-lg-8 p-4 rounded main" style="background-color: #9EB69E;">
-        <h3 class="mb-4 text-light">Send Me a Message</h3>
-
-        <form action="contact.php" method="post" role="form" class="php-email-form">
-          <div class="row">
-            <div class="col-md-6 form-group mb-3">
-              <input type="text" name="name" class="form-control  text-white border-0" id="name" placeholder="Your Name" required>
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <input type="text" name="name" placeholder="Your Name" required class="form-control mb-3" />
             </div>
-            <div class="col-md-6 form-group mt-3 mt-md-0 mb-3">
-              <input type="email" class="form-control text-white border-0" name="email" id="email" placeholder="Your Email" required>
+            <div class="col-md-6">
+              <input type="email" name="email" placeholder="Your Email" required class="form-control mb-3" />
             </div>
-          </div>
-          <div class="form-group mb-3">
-            <input type="text" class="form-control text-white border-0" name="organization" id="organization"
-              placeholder="Organization / Company Name" required>
-          </div>
+            <div class="col-12">
+              <input type="text" name="company" placeholder="Organization / Company Name" class="form-control mb-3" />
+            </div>
 
-          <!-- Reason for reaching out -->
-          <div class="form-group mt-3 mb-3 p-3 rounded" style="background-color: #c0d1bd;">
-            <label class="contact-form-service-label mb-2 text-light">Reason for reaching out today:</label>
-            <div class="row">
-              <div class="col-md-4 text-white">
-                <div><input type="radio" name="project_type" value="Scoreboard" required> Service Questions</div>
-                <div><input type="radio" name="project_type" value="Videoboard"> Personal video</div>
-                <div><input type="radio" name="project_type" value="Stadium Lights"> Blogs</div>
-              </div>
-              <div class="col-md-4 text-white">
-                <div><input type="radio" name="project_type" value="Msg Center"> Montages</div>
-                <div><input type="radio" name="project_type" value="Repair/Service"> Repair/Service</div>
-                <div><input type="radio" name="project_type" value="Scoreboard Rentals"> Wedding Videos</div>
-              </div>
-              <div class="col-md-4 text-white">
-                <div><input type="radio" name="project_type" value="New Structure"> Product Shoot</div>
-                <div><input type="radio" name="project_type" value="Other Installation"> Other Installation (Specify)</div>
+            <!-- Reason -->
+            <div class="col-12">
+              <div class="p-3 rounded mb-3" style="background-color: #c0d1bd;">
+                <label class="form-label mb-2">Reason for reaching out today:</label>
+                <div class="row">
+                  <div class="col-md-4">
+                    <div><input type="radio" name="reason" value="Service Questions" /> Service Questions</div>
+                    <div><input type="radio" name="reason" value="Personal video" /> Personal video</div>
+                    <div><input type="radio" name="reason" value="Blogs" /> Blogs</div>
+                  </div>
+                  <div class="col-md-4">
+                    <div><input type="radio" name="reason" value="Montages" /> Montages</div>
+                    <div><input type="radio" name="reason" value="Repair/Service" /> Video Editing</div>
+                    <div><input type="radio" name="reason" value="Wedding Videos" /> Wedding Videos</div>
+                  </div>
+                  <div class="col-md-4">
+                    <div><input type="radio" name="reason" value="Product Shoot" /> Product Shoot</div>
+                    <div><input type="radio" name="reason" value="Other Installation" /> Other (Specify)</div>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="form-group mt-3 mb-4">
-            <textarea class="form-control text-white border-0" name="message" placeholder="Message" required></textarea>
-          </div>
+            <!-- Message -->
+            <div class="col-12 mb-3">
+              <textarea name="message" rows="4" class="form-control" placeholder="Message" required></textarea>
+            </div>
 
-          <div class="my-3">
-            <div class="loading text-light">Loading</div>
-            <div class="error-message"></div>
-            <div class="sent-message text-light">Thank you for reaching out, Someone will be in contact with you ASAP about
-              your email.</div>
-          </div>
-
-          <div class="text-start">
-            <button type="submit" class="message btn btn-danger px-4 py-2" onclick="gtag_report_conversion()">Send Message</button>
+            <!-- Submit -->
+            <div class="col-12">
+              <button type="submit" class="btn submit-btn w-100">
+                Send Message
+              </button>
+            </div>
           </div>
         </form>
       </div>
 
-      <!-- Optional: Right column for contact info -->
-      <div class="col-lg-4 p-4 rounded" style="background-color: #9EB69E;">
-        <h3 class="my-3 mb-4 text-light">My Contact Info</h3>
-        <div class="contact-item">
-          <div class="contact-icon">
-              <img src="img/mail.png" alt="Email icon">
-          </div>
-          <div class="contact-text">
-              <h5 class="text-light">Email</h5>
-              <p><a href="mailto:DDiMartino@frhsd.com" class="text-white">DDiMartino@frhsd.com</a></p>
-            </div>
-      </div>
-      <div class="contact-item">
-        <div class="contact-icon">
-            <img src="img/location.png" class="insta"alt="Email icon">
-        </div>
-        <div class="contact-text">
-            <h5 class="text-light">Location</h5>
-            <p><a href="mailto:DDiMartino@frhsd.com" class="text-white">Marlboro, NJ</a></p>
-          </div>
-    </div>
-    <div class="contact-item">
-      <div class="contact-icon">
-          <img src="img/Instagram-Logo.png" class="insta" alt="Email icon">
-      </div>
-      <div class="contact-text">
-          <h5 class="text-light">Follow Me</h5>
-          <p><a href="mailto:DDiMartino@frhsd.com" class="text-white">@instagramaccount</a></p>
-        </div>
-  </div>
-        <p><strong>Email:</strong><br><a href="mailto:DDiMartino@frhsd.com" class="text-white">DDiMartino@frhsd.com</a></p>
-        <p><strong>Follow Us:</strong><br>@instagramaccount</p>
-        <div class="d-flex gap-3">
-          <a href="#" class="text-white"><i class="bi bi-twitter"></i></a>
-          <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
-          <a href="#" class="text-white"><i class="bi bi-github"></i></a>
-          <a href="#" class="text-white"><i class="bi bi-youtube"></i></a>
-        </div>
-      </div>
+      <!-- Contact Info Section -->
+      <div class="col-lg-4 p-4" style="background-color: #8ca88c;">
+        <h4 class="fw-bold text-white mb-4">My Contact Info</h4>
 
+        <div class="d-flex align-items-start mb-4">
+          <div class="icon-circle me-3">
+            <i class="bi bi-envelope-fill fs-5"></i>
+          </div>
+          <div>
+            <h6 class="mb-0 text-white">Email</h6>
+            <p class="mb-0"><a href="mailto:DDiMartino@frhsd.com" class="text-white text-decoration-none">DDiMartino@frhsd.com</a></p>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-start mb-4">
+          <div class="icon-circle me-3">
+            <i class="bi bi-geo-alt-fill fs-5"></i>
+          </div>
+          <div>
+            <h6 class="mb-0 text-white">Location</h6>
+            <p class="mb-0 text-white">Marlboro, NJ</p>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-start mb-4">
+          <div class="icon-circle me-3">
+            <i class="bi bi-instagram fs-5"></i>
+          </div>
+          <div>
+            <h6 class="mb-0 text-white">Follow Me</h6>
+            <p class="mb-0"><a href="#" class="text-white text-decoration-none">@instagramaccount</a></p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
-
-  
-<!-- End Info Item -->
-  
-              </div>
-  
-            </div>
-          </div>
-  
-        </div>
-      </section><!-- End Contact Section -->
         </main>
       <!-- Footer -->
 <footer class="text-center text-lg-start text-muted">

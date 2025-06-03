@@ -218,6 +218,12 @@ nav{
 li.nav-item{
     color: white;
 }
+.green{
+  .contact .col-lg-8 {
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.651);
+    border-radius: 0.5rem;
+  }
+}
 .contact input,
 .contact textarea {
   background-color: #c0d1bd;
@@ -230,21 +236,46 @@ li.nav-item{
 .contact textarea::placeholder {
   color: #ffffffb7;
 }
-.main{
-  border: 2px solid #b5ceb5;
-}
-.contact button.btn-danger {
-  background-color: #E0C48A;
-  border: none;
-  border-radius: 8px;
+
+.contact .form-control {
+  background-color: #c0d1bd;
 }
 
 .contact .form-control:focus {
   box-shadow: none;
-  background-color: #cddbca;
-}
-.form-control{
   background-color: #E7ECE6;
+}
+
+/* Submit Button */
+.submit-btn {
+  background-color: #E0C48A;
+  color: white;
+  font-weight: 500;
+  padding: 0.75rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.submit-btn:hover {
+  background-color: #f7ca71;
+  transform: scale(1.01);
+  color: white;
+}
+
+/* Icon Circles */
+.icon-circle {
+  background-color: #E0C48A;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-circle i {
+  color: white;
 }
 :root {
     --primary-color: #4000ff;
@@ -450,7 +481,15 @@ h1#form{
     margin: -100px;
 
 }
+.lessons-section {
+  background-color:#e7dfd6a6;
+  width: 100%;
+}
 
+.lessons {
+  position: relative;
+  z-index: 1;
+}
 
 .info-title {
     color: white;
