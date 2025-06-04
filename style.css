@@ -11,23 +11,6 @@ body{
     background-color: #e7dfd675;
     overflow-x: hidden;
 }
-.gradient{
-    background-image: linear-gradient(#A8BEAB, #DDE2DD);
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 100vh;
-    background-position: center;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; /* This centers vertically */
-
-}
-.headshot{
-  max-height: 40em;
-}
 h1.editing{
   text-align: center;
 }
@@ -38,7 +21,6 @@ h1.display-1 {
 }
 .skills{
     text-align: center;
-    margin-bottom: -5em;
     margin-top: 5em;
 }
 h1.banner{
@@ -142,63 +124,101 @@ h3.instruction{
     margin-top: 0;
 }
 /* Make .click a flex container that stays inline with the text */
-.click {
+.gradient {
+  background-image: linear-gradient(#A8BEAB, #DDE2DD);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  background-position: center;
+  overflow: hidden;
   display: flex;
-  flex-wrap: nowrap; /* prevent wrapping unless absolutely needed */
-  gap: 1em;
   align-items: center;
-  justify-content: start;
-  margin-top: 1em;
+  justify-content: center;
 }
 
-/* Base button styles */
+/* Wrapper limits image size */
+.headshot-wrapper {
+  max-height: 80vh;
+  max-width: 90%;
+  border: 4px solid #ffffffcc;
+  border-top-left-radius: 250px;
+  border-top-right-radius: 250px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 0.5rem;
+  overflow: hidden;
+  background-color: #ffffff1a;
+}
+
+/* Image fits inside wrapper */
+.headshot-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-top-left-radius: 250px;
+  border-top-right-radius: 250px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .headshot-wrapper {
+    max-height: 60vh;
+  }
+
+  .headshot-img {
+    border-radius: 10px;
+  }
+}
+.click {
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+
 .btn.about,
 .btn.contact {
   font-family: "Instrument Sans", sans-serif;
-  font-size: 2.5em;
-  padding: 0.3em 1em;
+  font-size: 1.25rem;
+  padding: 0.6em 1.6em;
   border-radius: 10px;
-  border: 4px solid white;
-  white-space: nowrap;
+  border: 3px solid white;
+  transition: all 0.3s ease;
 }
 
-/* Specific styles */
+/* Button Styling */
 .btn.about {
   color: #A8BEAB;
   background-color: white;
+}
+.btn.about:hover {
+  background-color: #e7f0e8;
+  transform: translateY(-2px);
 }
 
 .btn.contact {
   color: white;
   background-color: transparent;
 }
-
-/* RESPONSIVE scaling for smaller screens */
-@media (max-width: 768px) {
-  .btn.about,
-  .btn.contact {
-    font-size: 1.5em;
-    padding: 0.3em 0.8em;
-  }
+.btn.contact:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
 }
 
-@media (max-width: 576px) {
-  .col-12.col-lg-6 {
-    padding-left: 1 !important;
-    padding-right: 0 !important;
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .display-1 {
+    font-size: 2.5rem;
+  }
+
+  .headshot-wrapper {
+    max-width: 20em;
   }
 
   .click {
-    padding-left: 1em;
-    padding-right: 1em;
+    justify-content: center;
   }
 }
-
-  .btn.about,
-  .btn.contact {
-    font-size: 1.2em;
-    margin-bottom: 0.5em;
-  }
 #logo {
     display: block; /* ensures the link takes up space */
     background-color: transparent;
@@ -212,11 +232,62 @@ h3.instruction{
     background-repeat: no-repeat;
     margin-left: .75em;
   }
-nav{
-    background-color: #9EB69E;
+/* Navbar background and elevation */
+.custom-navbar {
+  background-color: #9EB69E;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
-li.nav-item{
-    color: white;
+
+/* Brand name */
+.navbar-brand {
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
+
+/* Nav links */
+.custom-link {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: white !important;
+  padding: 0.5rem 1rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Hover underline effect */
+.custom-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.custom-link:hover::after {
+  width: 100%;
+}
+
+/* Hover glow */
+.custom-link:hover {
+  color: #f0f0f0 !important;
+}
+
+/* Active nav-item (optional if using JS for current page) */
+.custom-link.active {
+  font-weight: 600;
+  border-bottom: 2px solid white;
+}
+
+/* Mobile toggle icon override if needed */
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 .green{
   .contact .col-lg-8 {
@@ -485,7 +556,10 @@ h1#form{
   background-color:#e7dfd6a6;
   width: 100%;
 }
-
+.lessons .info-row {
+  padding: 6rem 1rem; /* Internal spacing for content */
+  border-radius: 1rem;
+}
 .lessons {
   position: relative;
   z-index: 1;
@@ -543,9 +617,12 @@ h2.examples{
     padding: 0.5em 1em;
     margin: 0.5em;
     transition: all 0.3s ease;
-    font-family: "Kanit";
+    font-family: "Poppins", sans-serif;
     font-weight: 300;
     margin: 1em;
+  }
+  .btn.tabs{
+    font-family: "Poppins", sans-serif;
   }
   
   .pages button:hover {
@@ -982,12 +1059,24 @@ a{
 .gallery-item {
   position: relative;
   display: block;
+  width: 100%;
   overflow: hidden;
 }
 
+/* Create a 1:1 aspect ratio */
+.gallery-item::before {
+  content: "";
+  display: block;
+  padding-top: 100%; /* 1:1 Aspect Ratio */
+}
+
+/* Image styles */
 .gallery-item img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 320px;
+  height: 100%;
   object-fit: cover;
   transition: transform 0.5s ease, filter 0.5s ease;
   display: block;
