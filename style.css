@@ -557,7 +557,8 @@ h1#form{
   width: 100%;
 }
 .lessons .info-row {
-  padding: 6rem 1rem; /* Internal spacing for content */
+  padding-top: 6em;
+  padding-bottom: 10em;
   border-radius: 1rem;
 }
 .lessons {
