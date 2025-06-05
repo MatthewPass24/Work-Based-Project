@@ -1,32 +1,28 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <title>Title</title>
-        <!-- Required meta tags -->
-        <meta charset="utf-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
-        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
-        <!-- Bootstrap CSS v5.2.1 -->
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-            crossorigin="anonymous"
-        />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<head>
+  <title>Contact Page</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="icon" type="image/png" href="img/Asset 1 (1).svg">
 
-        <link rel="stylesheet" href="style.css">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
-    </head>
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
-    <body>
-        <header>
-            <!-- place navbar here -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+  <header>
+    <!-- place navbar here -->
     <nav class="navbar navbar-expand-lg sticky-top custom-navbar shadow-sm">
       <div class="container-fluid">
         <!-- Logo (optional) -->
@@ -49,172 +45,159 @@
       </div>
     </nav>
 
-        </header>
-        <main>
-          <h1 class="banner text-align-center justify-content-center mb-5" id="form">Contact Me</h1>
-<!-- ======= Contact Section ======= -->
-<section id="contact" class="py-5 contact">
-  <div class="container">
-    <div class="row g-0 shadow rounded overflow-hidden green" style="background-color: #9EB69E; font-family: 'Poppins', sans-serif;">
-      <!-- Form Section -->
-      <div class="col-lg-8 p-4">
-        <h3 class="fw-bold text-white mb-4">Send Me a Message</h3>
-        <form action="https://api.web3forms.com/submit" method="POST" id="form">
-          <input type="hidden" name="access_key" value="dc593151-0ece-4356-ad59-f5598fc19511" />
-          <input type="hidden" name="subject" value="New Submission from Web3Forms" />
-          <input type="checkbox" name="botcheck" class="d-none" />
+  </header>
+  <main>
+    <h1 class="banner text-align-center justify-content-center mb-5" id="form">Contact Me</h1>
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="py-5 contact">
+      <div class="container">
+        <div class="row g-0 shadow rounded overflow-hidden green"
+          style="background-color: #9EB69E; font-family: 'Poppins', sans-serif;">
+          <!-- Form Section -->
+          <div class="col-lg-8 p-4">
+            <h3 class="fw-bold text-white mb-4">Send Me a Message</h3>
+            <form action="https://api.web3forms.com/submit" method="POST" id="form">
+              <input type="hidden" name="access_key" value="dc593151-0ece-4356-ad59-f5598fc19511" />
+              <input type="hidden" name="subject" value="New Submission from Web3Forms" />
+              <input type="checkbox" name="botcheck" class="d-none" />
 
-          <div class="row mb-3">
-            <div class="col-md-6">
-              <input type="text" name="name" placeholder="Your Name" required class="form-control mb-3" />
-            </div>
-            <div class="col-md-6">
-              <input type="email" name="email" placeholder="Your Email" required class="form-control mb-3" />
-            </div>
-            <div class="col-12">
-              <input type="text" name="company" placeholder="Organization / Company Name" class="form-control mb-3" />
-            </div>
+              <div class="row mb-3">
+                <div class="col-md-6">
+                  <input type="text" name="name" placeholder="Your Name" required class="form-control mb-3" />
+                </div>
+                <div class="col-md-6">
+                  <input type="email" name="email" placeholder="Your Email" required class="form-control mb-3" />
+                </div>
+                <div class="col-12">
+                  <input type="text" name="company" placeholder="Organization / Company Name"
+                    class="form-control mb-3" />
+                </div>
 
-            <!-- Reason -->
-<div class="col-12">
-  <div class="p-3 rounded mb-3" style="background-color: #c0d1bd; color: white;">
-    <label class="form-label mb-2" style="color: white;">Reason for reaching out today:</label>
-    <div class="row">
-      <div class="col-md-4">
-        <div><input type="radio" name="reason" value="Service Questions" /> <span>Service Questions</span></div>
-        <div><input type="radio" name="reason" value="Personal video" /> <span>Personal video</span></div>
-        <div><input type="radio" name="reason" value="Blogs" /> <span>Blogs</span></div>
-      </div>
-      <div class="col-md-4">
-        <div><input type="radio" name="reason" value="Montages" /> <span>Montages</span></div>
-        <div><input type="radio" name="reason" value="Repair/Service" /> <span>Video Editing</span></div>
-        <div><input type="radio" name="reason" value="Wedding Videos" /> <span>Wedding Videos</span></div>
-      </div>
-      <div class="col-md-4">
-        <div><input type="radio" name="reason" value="Product Shoot" /> <span>Product Shoot</span></div>
-        <div><input type="radio" name="reason" value="Other Installation" /> <span>Other (Specify)</span></div>
-      </div>
-    </div>
-  </div>
-</div>
+                <!-- Reason -->
+                <div class="col-12">
+                  <div class="p-3 rounded mb-3" style="background-color: #c0d1bd; color: white;">
+                    <label class="form-label mb-2" style="color: white;">Reason for reaching out today:</label>
+                    <div class="row">
+                      <div class="col-md-4">
+                        <div><input type="radio" name="reason" value="Service Questions" /> <span>Service
+                            Questions</span></div>
+                        <div><input type="radio" name="reason" value="Personal video" /> <span>Personal video</span>
+                        </div>
+                        <div><input type="radio" name="reason" value="Blogs" /> <span>Blogs</span></div>
+                      </div>
+                      <div class="col-md-4">
+                        <div><input type="radio" name="reason" value="Montages" /> <span>Montages</span></div>
+                        <div><input type="radio" name="reason" value="Repair/Service" /> <span>Video Editing</span>
+                        </div>
+                        <div><input type="radio" name="reason" value="Wedding Videos" /> <span>Wedding Videos</span>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div><input type="radio" name="reason" value="Product Shoot" /> <span>Product Shoot</span></div>
+                        <div><input type="radio" name="reason" value="Other Installation" /> <span>Other
+                            (Specify)</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
-            <!-- Message -->
-            <div class="col-12 mb-3">
-              <textarea name="message" rows="4" class="form-control" placeholder="Message" required></textarea>
-            </div>
+                <!-- Message -->
+                <div class="col-12 mb-3">
+                  <textarea name="message" rows="4" class="form-control" placeholder="Message" required></textarea>
+                </div>
 
-            <!-- Submit -->
-            <div class="col-12">
-              <button type="submit" class="btn submit-btn w-100">
-                Send Message
-              </button>
-            </div>
+                <!-- Submit -->
+                <div class="col-12">
+                  <button type="submit" class="btn submit-btn w-100">
+                    Send Message
+                  </button>
+                </div>
+              </div>
+            </form>
           </div>
-        </form>
-      </div>
 
-      <!-- Contact Info Section -->
-      <div class="col-lg-4 p-4" style="background-color: #8ca88c;">
-        <h4 class="fw-bold text-white mb-4">My Contact Info</h4>
+          <!-- Contact Info Section -->
+          <div class="col-lg-4 p-4" style="background-color: #8ca88c;">
+            <h4 class="fw-bold text-white mb-4">My Contact Info</h4>
 
-        <div class="d-flex align-items-start mb-4">
-          <div class="icon-circle me-3">
-            <i class="bi bi-envelope-fill fs-5"></i>
-          </div>
-          <div>
-            <h6 class="mb-0 text-white">Email</h6>
-            <p class="mb-0"><a href="mailto:DDiMartino@frhsd.com" class="text-white text-decoration-none">DDiMartino@frhsd.com</a></p>
+            <div class="d-flex align-items-start mb-4">
+              <div class="icon-circle me-3">
+                <i class="bi bi-envelope-fill fs-5"></i>
+              </div>
+              <div>
+                <h6 class="mb-0 text-white">Email</h6>
+                <p class="mb-0"><a href="mailto:DDiMartino@frhsd.com"
+                    class="text-white text-decoration-none">DDiMartino@frhsd.com</a></p>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-start mb-4">
+              <div class="icon-circle me-3">
+                <i class="bi bi-geo-alt-fill fs-5"></i>
+              </div>
+              <div>
+                <h6 class="mb-0 text-white">Location</h6>
+                <p class="mb-0 text-white">Marlboro, NJ</p>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-start mb-4">
+              <div class="icon-circle me-3">
+                <i class="bi bi-instagram fs-5"></i>
+              </div>
+              <div>
+                <h6 class="mb-0 text-white">Follow Me</h6>
+                <p class="mb-0"><a href="#" class="text-white text-decoration-none">@daniela_dimartino</a></p>
+              </div>
+            </div>
           </div>
         </div>
-
-        <div class="d-flex align-items-start mb-4">
-          <div class="icon-circle me-3">
-            <i class="bi bi-geo-alt-fill fs-5"></i>
-          </div>
-          <div>
-            <h6 class="mb-0 text-white">Location</h6>
-            <p class="mb-0 text-white">Marlboro, NJ</p>
-          </div>
-        </div>
-
-        <div class="d-flex align-items-start mb-4">
-          <div class="icon-circle me-3">
-            <i class="bi bi-instagram fs-5"></i>
-          </div>
-          <div>
-            <h6 class="mb-0 text-white">Follow Me</h6>
-            <p class="mb-0"><a href="#" class="text-white text-decoration-none">@daniela_dimartino</a></p>
-          </div>
-        </div>
       </div>
-    </div>
-  </div>
-</section>
-        </main>
-<button onclick="topFunction()" id="myBtn" title="Go to top">
-  <i class="fas fa-chevron-up"></i>
-</button>
-       <!-- Footer -->
-  <footer class="text-center" style="background-color: #9EB69E;">
-  <!-- Grid container -->
-  <div class="container pt-4">
-    <!-- Section: Social media -->
-    <section class="mb-4">
-
-      <!-- Google -->
-      <a
-        data-mdb-ripple-init
-        class="btn btn-link btn-floating btn-lg text-body m-1"
-        href="#!"
-        role="button"
-        data-mdb-ripple-color="dark"
-        ><i class="fab fa-google"></i
-      ></a>
-
-      <!-- Instagram -->
-      <a
-        data-mdb-ripple-init
-        class="btn btn-link btn-floating btn-lg text-body m-1"
-        href="#!"
-        role="button"
-        data-mdb-ripple-color="dark"
-        ><i class="fab fa-instagram"></i
-      ></a>
-
-      <!-- Linkedin -->
-      <a
-        data-mdb-ripple-init
-        class="btn btn-link btn-floating btn-lg text-body m-1"
-        href="#!"
-        role="button"
-        data-mdb-ripple-color="dark"
-        ><i class="fab fa-linkedin"></i
-      ></a>
     </section>
-    <!-- Section: Social media -->
-  </div>
-  <!-- Grid container -->
+  </main>
+  <button onclick="topFunction()" id="myBtn" title="Go to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+  <!-- Footer -->
+  <footer class="text-center" style="background-color: #9EB69E;">
+    <!-- Grid container -->
+    <div class="container pt-4">
+      <!-- Section: Social media -->
+      <section class="mb-4">
 
-  <!-- Copyright -->
-  <div class="text-center p-3 text-light" style="background-color: #9EB69E;">
-    © 2025 Copyright:
-    <a class="text-light" href="https://mdbootstrap.com/">Daniela DiMartino</a>
-  </div>
-  <!-- Copyright -->
-</footer>
-<!-- Footer -->
-        <!-- Bootstrap JavaScript Libraries -->
-        <script
-            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-            crossorigin="anonymous"
-        ></script>
+        <!-- Google -->
+        <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="#!" role="button"
+          data-mdb-ripple-color="dark"><i class="fab fa-google"></i></a>
 
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-            crossorigin="anonymous"
-        ></script>
-        <script src="script.js"></script>
-    </body>
+        <!-- Instagram -->
+        <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="#!" role="button"
+          data-mdb-ripple-color="dark"><i class="fab fa-instagram"></i></a>
+
+        <!-- Linkedin -->
+        <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="#!" role="button"
+          data-mdb-ripple-color="dark"><i class="fab fa-linkedin"></i></a>
+      </section>
+      <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3 text-light" style="background-color: #9EB69E;">
+      © 2025 Copyright:
+      <a class="text-light" href="https://mdbootstrap.com/">Daniela DiMartino</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+
 </html>

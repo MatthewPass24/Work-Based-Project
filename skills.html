@@ -1,34 +1,26 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <title>Title</title>
-        <!-- Required meta tags -->
-        <meta charset="utf-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- Bootstrap CSS v5.2.1 -->
-             <!-- Fontawesome Link for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-            crossorigin="anonymous"
-        />
-        <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-/>
-        <link rel="stylesheet" href="style.css">
-    </head>
+<head>
+  <title>My Skills</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="img/Asset 1 (1).svg">
 
-    <body>
-        <header>
-            <!-- place navbar here -->
+  <!-- Bootstrap CSS v5.2.1 -->
+  <!-- Fontawesome Link for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <!-- place navbar here -->
     <nav class="navbar navbar-expand-lg sticky-top custom-navbar shadow-sm">
       <div class="container-fluid">
         <!-- Logo (optional) -->
@@ -51,171 +43,163 @@
       </div>
     </nav>
 
-        </header>
-        <main>
-          <div class="landing">
-            <video autoplay loop muted playsinline>
-              <source src="img/video1.mp4" type="video/mp4">
-            </video>
-          
-            <div class="content text-center">
-              <h1 class="display-1">My Experience</h1>
-            </div>
+  </header>
+  <main>
+    <div class="landing">
+      <video autoplay loop muted playsinline>
+        <source src="img/video1.mp4" type="video/mp4">
+      </video>
+
+      <div class="content text-center">
+        <h1 class="display-1">My Experience</h1>
+      </div>
+    </div>
+    <div class="skills">
+      <h1 class="banner">My Skills</h1>
+      <h3 class="instruction mb-5">Click each icon below to find out more</h3>
+      <div class="container1 mt-5">
+        <div class="row" id="about">
+          <div class="col-4 col-lg-4 text-center info" onclick="updateDescription('VFX')">
+            <a href="#learn" class="clipart">
+              <img class="emoji" src="img/special-effects-icon-2048x2048-o197xkfs 1.png" alt="">
+            </a>
           </div>
-          <div class="skills">
-          <h1 class="banner">My Skills</h1>
-          <h3 class="instruction mb-5">Click each icon below to find out more</h3>
-          <div class="container1 mt-5">
-            <div class="row" id="about">
-              <div class="col-4 col-lg-4 text-center info" onclick="updateDescription('VFX')">
-                <a href="#learn" class="clipart">
-                  <img class="emoji" src="img/special-effects-icon-2048x2048-o197xkfs 1.png" alt="">
-                </a>
-              </div>
-              
-              <div class="col-4 col-lg-4 text-center info" onclick="updateDescription('Camera')">
-                <a href="#learn" class="clipart">
-                  <img class="emoji" src="img/camera.png" alt="">
-                </a>
-              </div>
-              
-              <div class="col-4 col-lg-4 text-center info" onclick="updateDescription('Adobe')">
-                <a href="#learn" class="clipart">
-                  <img class="emoji" src="img/Premiere.png" alt="">
-                </a>
-              </div>
-              
-            </div>
+
+          <div class="col-4 col-lg-4 text-center info" onclick="updateDescription('Camera')">
+            <a href="#learn" class="clipart">
+              <img class="emoji" src="img/camera.png" alt="">
+            </a>
           </div>
-            </div>
- <section class="lessons-section">
-              <div class="container lessons" id="learn">
-                <div class="row info-row d-flex justify-content-center align-items-center">              
-                  <h1 class="banner" id="green">What I learned</h1>
-                  <div class="skills-image col-12 col-lg-6" id="learn"></div>
-                  <div class="skills-text col-12 col-lg-6 d-flex flex-column justify-content-center align-items-center">
-                    <h1 class="text-center info-title" id="change-title">How it Helped</h1>
-                    <div class="info-section text-center">Click an icon above to see more info!</div>
-                  </div>
-                </div>
-              </div>
-            </section>
-            <h1 class="banner mb-3">Video Equipment</h1>
-            <h3 class="instruction text-center">These are the pieces of equipment I'm familiar with since I starting videography</h3>
 
-            <div class="container-fluid gallery-container mt-5  px-3 px-lg-5">
-              <div class="row g-3">
-                <div class="col-md-4 col-sm-6">
-                  <a href="#" class="gallery-item">
-                    <img src="img/dslr.jpg" alt="">
-                    <div class="col-pic"><h5>Canon DSLR</h5></div>
-                  </a>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                  <a href="#" class="gallery-item">
-                    <img src="img/tripod.jpg" alt="">
-                    <div class="col-pic"><h5>Tripod</h5></div>
-                  </a>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                  <a href="#" class="gallery-item">
-                    <img src="img/ulanzi.jpg" alt="">
-                    <div class="col-pic"><h5>RGB Camera Light</h5></div>
-                  </a>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                  <a href="#" class="gallery-item">
-                    <img src="img/mic.jpg" alt="">
-                    <div class="col-pic"><h5>Rode Microphone</h5></div>
-                  </a>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                  <a href="#" class="gallery-item">
-                    <img src="img/remote.jpg" alt="">
-                    <div class="col-pic"><h5>Canon Remote</h5></div>
-                  </a>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                  <a href="#" class="gallery-item">
-                    <img src="img/windscreen.jpg" alt="">
-                    <div class="col-pic"><h5>Rode Windscreen</h5></div>
-                  </a>
-                </div>
-              </div>
-            </div>
+          <div class="col-4 col-lg-4 text-center info" onclick="updateDescription('Adobe')">
+            <a href="#learn" class="clipart">
+              <img class="emoji" src="img/Premiere.png" alt="">
+            </a>
+          </div>
 
-            
-        </main>
-<button onclick="topFunction()" id="myBtn" title="Go to top">
-  <i class="fas fa-chevron-up"></i>
-</button>  <!-- Footer -->
-  <footer class="text-center" style="background-color: #9EB69E;">
-  <!-- Grid container -->
-  <div class="container pt-4">
-    <!-- Section: Social media -->
-    <section class="mb-4">
-
-      <!-- Google -->
-      <a
-        data-mdb-ripple-init
-        class="btn btn-link btn-floating btn-lg text-body m-1"
-        href="#!"
-        role="button"
-        data-mdb-ripple-color="dark"
-        ><i class="fab fa-google"></i
-      ></a>
-
-      <!-- Instagram -->
-      <a
-        data-mdb-ripple-init
-        class="btn btn-link btn-floating btn-lg text-body m-1"
-        href="#!"
-        role="button"
-        data-mdb-ripple-color="dark"
-        ><i class="fab fa-instagram"></i
-      ></a>
-
-      <!-- Linkedin -->
-      <a
-        data-mdb-ripple-init
-        class="btn btn-link btn-floating btn-lg text-body m-1"
-        href="#!"
-        role="button"
-        data-mdb-ripple-color="dark"
-        ><i class="fab fa-linkedin"></i
-      ></a>
+        </div>
+      </div>
+    </div>
+    <section class="lessons-section">
+      <div class="container lessons" id="learn">
+        <div class="row info-row d-flex justify-content-center align-items-center">
+          <h1 class="banner" id="green">What I learned</h1>
+          <div class="skills-image col-12 col-lg-6" id="learn"></div>
+          <div class="skills-text col-12 col-lg-6 d-flex flex-column justify-content-center align-items-center">
+            <h1 class="text-center info-title" id="change-title">How it Helped</h1>
+            <div class="info-section text-center">Click an icon above to see more info!</div>
+          </div>
+        </div>
+      </div>
     </section>
-    <!-- Section: Social media -->
-  </div>
-  <!-- Grid container -->
+    <h1 class="banner mb-3">Video Equipment</h1>
+    <h3 class="instruction text-center">These are the pieces of equipment I'm familiar with since I starting videography
+    </h3>
 
-  <!-- Copyright -->
-  <div class="text-center p-3 text-light" style="background-color: #9EB69E;">
-    © 2025 Copyright:
-    <a class="text-light" href="https://mdbootstrap.com/">Daniela DiMartino</a>
-  </div>
-  <!-- Copyright -->
-</footer>
-<!-- Footer -->
-        <!-- Bootstrap JavaScript Libraries -->
-         <!-- Vue.js -->
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <div class="container-fluid gallery-container mt-5  px-3 px-lg-5">
+      <div class="row g-3">
+        <div class="col-md-4 col-sm-6">
+          <a href="#" class="gallery-item">
+            <img src="img/dslr.jpg" alt="">
+            <div class="col-pic">
+              <h5>Canon DSLR</h5>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <a href="#" class="gallery-item">
+            <img src="img/tripod.jpg" alt="">
+            <div class="col-pic">
+              <h5>Tripod</h5>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <a href="#" class="gallery-item">
+            <img src="img/ulanzi.jpg" alt="">
+            <div class="col-pic">
+              <h5>RGB Camera Light</h5>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <a href="#" class="gallery-item">
+            <img src="img/mic.jpg" alt="">
+            <div class="col-pic">
+              <h5>Rode Microphone</h5>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <a href="#" class="gallery-item">
+            <img src="img/remote.jpg" alt="">
+            <div class="col-pic">
+              <h5>Canon Remote</h5>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <a href="#" class="gallery-item">
+            <img src="img/windscreen.jpg" alt="">
+            <div class="col-pic">
+              <h5>Rode Windscreen</h5>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
 
-<!-- Vue Carousel 3D -->
-<script src="https://unpkg.com/vue-carousel-3d@0.1.27/dist/vue-carousel-3d.min.js"></script>
-<script src="script.js" defer></script>
 
-        <script
-            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-            crossorigin="anonymous"
-        ></script>
+  </main>
+  <button onclick="topFunction()" id="myBtn" title="Go to top">
+    <i class="fas fa-chevron-up"></i>
+  </button> <!-- Footer -->
+  <footer class="text-center" style="background-color: #9EB69E;">
+    <!-- Grid container -->
+    <div class="container pt-4">
+      <!-- Section: Social media -->
+      <section class="mb-4">
 
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-            crossorigin="anonymous"
-        ></script>
-        
-    </body>
+        <!-- Google -->
+        <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="#!" role="button"
+          data-mdb-ripple-color="dark"><i class="fab fa-google"></i></a>
+
+        <!-- Instagram -->
+        <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="#!" role="button"
+          data-mdb-ripple-color="dark"><i class="fab fa-instagram"></i></a>
+
+        <!-- Linkedin -->
+        <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-body m-1" href="#!" role="button"
+          data-mdb-ripple-color="dark"><i class="fab fa-linkedin"></i></a>
+      </section>
+      <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3 text-light" style="background-color: #9EB69E;">
+      © 2025 Copyright:
+      <a class="text-light" href="https://mdbootstrap.com/">Daniela DiMartino</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+  <!-- Bootstrap JavaScript Libraries -->
+  <!-- Vue.js -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+  <!-- Vue Carousel 3D -->
+  <script src="https://unpkg.com/vue-carousel-3d@0.1.27/dist/vue-carousel-3d.min.js"></script>
+  <script src="script.js" defer></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+
+</body>
+
 </html>
