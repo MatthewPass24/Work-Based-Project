@@ -1,80 +1,69 @@
 {
     "Season 1 Highlights": [
       {
-        "img": "img/image 1.png",
-        "title": "Mustang Morning Show S2 E06",
-        "link": "https://www.youtube.com/watch?v=ZFSPvbJHHGg&t=476s",
+        "img": "img/pilot.png",
+        "title": "Mustang Morning Show S1 E1",
+        "link": "https://www.youtube.com/watch?v=0EBrGt4rysA",
         "alt": "Screenshot of Mustang Morning Show"
       },
       {
-        "img": "img/Screenshot 2025-04-02 124527.png",
-        "title": "Mustang Morning Show 2",
-        "link": "https://abbiemarder.github.io/Senior-Portfolio/?authuser=0",
+        "img": "img/bradybunch.png",
+        "title": "Mustang Morning Show S1 E3",
+        "link": "https://www.youtube.com/watch?v=Kdp_pjX-Uws",
         "alt": "Screenshot of Abbie Marder's portfolio site"
       },
       {
-        "img": "img/Screenshot 2025-04-02 124847.png",
-        "title": "Mustang Morning Show S1 E07",
-        "link": "https://www.youtube.com/watch?v=qLBEPRSHIJY&t=1s",
+        "img": "img/interview.png",
+        "title": "Mustang Morning Show S1 E7",
+        "link": "https://www.youtube.com/watch?v=qLBEPRSHIJY",
         "alt": "Screenshot of Mustang Morning Show"
       },
       {
-        "img": "img/image (3).png",
-        "title": "NJGPA Music Video",
-        "link": "https://bwinecoor.github.io/newportfolio/site2.html#home",
+        "img": "img/friends.png",
+        "title": "Mustang Morning Show S1 E8",
+        "link": "https://www.youtube.com/watch?v=DGyF8vda2W4",
         "alt": "Screenshot of Brandon Winecoor's portfolio site"
       }
     ],
     "Season 2 Highlights": [
       {
         "img": "img/Screenshot 2025-04-02 124847.png",
-        "title": "Mustang Morning Show S2 E02",
+        "title": "Mustang Morning Show S2 E2",
         "link": "https://www.youtube.com/watch?v=06bV46l-nTw&t=1s",
         "alt": "Screenshot of Mustang Morning Show"
       },
       {
+        "img": "img/christmas.png",
+        "title": "Mustang Morning Show S2 E4",
+        "link": "https://www.youtube.com/watch?v=iGMzgWW0tZw&t=0s",
+        "alt": "Screenshot of Mustang Morning Show"
+      },
+      {
         "img": "img/image 1.png",
-        "title": "Mustang Morning Show S2 E06",
+        "title": "Mustang Morning Show S2 E6",
         "link": "https://www.youtube.com/watch?v=ZFSPvbJHHGg&t=1s",
         "alt": "Screenshot of Mustang Morning Show"
       },
       {
-        "img": "img/Screenshot 2025-04-02 124847.png",
-        "title": "Coco Chanel Site",
-        "link": "https://ayatsakalla.github.io/Look-Ma--I-m-Famous/index.html",
+       "img": "img/commitment.png",
+        "title": "Mustang Morning Show S2 E9",
+        "link": "https://www.youtube.com/watch?v=NdS6KRvIkgI&t=0s",
         "alt": "Screenshot of Coco Chanel website project"
-      },
-      {
-        "img": "iimg/image (3).png",
-        "title": "Final Junior Site",
-        "link": "https://kylerabkin61.github.io/Final-Project/index.html#story",
-        "alt": "Screenshot of Final Junior Site project"
       }
     ],
     "Personal Projects": [
       {
         "img": "img/image (3).png",
         "title": "NJGPA Music Video",
-        "link": "https://bwinecoor.github.io/newportfolio/site2.html#home",
+        "link": "https://www.youtube.com/watch?v=UuNujupasGI",
         "alt": "Screenshot of Brandon Winecoor's portfolio site"
       },
       {
-        "img": "img/alumni/crochet.png",
-        "title": "Crochet Club Project",
+        "img": "img/mhs.png",
+        "title": "MHS 2025 Video",
+        "description": "Coming Soon...",
         "link": "https://523chloel.github.io/CrochetCrew/",
         "alt": "Screenshot of Crochet Club Project website"
-      },
-      {
-        "img": "img/alumni/njit-project.png",
-        "title": "NJIT Slideshow Project",
-        "link": "https://zlevin1228.github.io/NJIT-Slideshow/",
-        "alt": "Screenshot of NJIT Slideshow Project site"
-      },
-      {
-        "img": "img/alumni/caltech.png",
-        "title": "College Recruitment",
-        "link": "https://saltforsale.github.io/Phase-Tw0/",
-        "alt": "Screenshot of Collect Recruitment website"
       }
     ]
   }

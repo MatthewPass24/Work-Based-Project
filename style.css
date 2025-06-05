@@ -500,7 +500,8 @@ h1#form{
     margin-top: 10em;
 }
 .info-row {
-    margin: 300px 0;
+    margin-top: 10em;
+    margin-bottom: 5em;
 }
 
 .skills-image {
@@ -574,12 +575,16 @@ h1#form{
 }
 
 .info-section {
-    background: #dde2dc79;
-    margin: 15px;
-    padding: 10px;
-    font-size: clamp(15px, 1.3vw, 50px);
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(6px);
+  padding: 2rem 1rem;
+  font-size: clamp(1rem, 1.2vw, 1.5rem);
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+  border-radius: 0.75rem;
+  max-width: 500px;
+  margin: 0.5em;
 }
 .clipart {
     text-decoration: none;
@@ -981,20 +986,26 @@ a{
 }
 
 #myBtn {
-  display: none; /* Hidden by default */
-  position: fixed; /* Fixed/sticky position */
-  bottom: 20px; /* Place the button at the bottom of the page */
-  right: 30px; /* Place the button 30px from the right */
-  z-index: 99; /* Make sure it does not overlap */
-  background-color: #8fa794; /* Set a background color */
-  color: white; /* Text color */
-  font-family: 'Poppins';
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background-color: #819b87;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 1000;
 }
 
 #myBtn:hover {
-  background-color: #729b7b; /* Add a dark-grey background on hover */
-
-  color: white;
+  background-color: #698870;
 }
 /* Contact Info Styling */
 .contact-info {
@@ -1128,4 +1139,7 @@ a{
 .gallery-item:hover::after {
   height: 50%;
   opacity: 1;
+}
+.btn .fab {
+  color: white !important;
 }
